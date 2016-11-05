@@ -1,6 +1,22 @@
-// $(document).ready(function() {
-//   event.preventDefault();
-//
+$(document).ready(function() {
+  event.preventDefault();
+
+  $( "button#add" ).on( "click", function( event ) {
+    $('#testlist').append('<button class="btn btn-primary notSelected"id="4" name="select">'
+      + $('#name').val()
+      + '</button></br>Init: ' +$('#init').val()
+      + " | AC: " + $('#ac').val()
+      + " | HP: " +$('#hp').val()
+      +  ' <button class="btn btn-danger " name="delete">X</button></br>'
+    );
+
+    //console.log("selected");
+  });
+});
+
+
+
+
 // //edit button
 //   $( "button.notSelected" ).on( "click", function( event ) {
 //     $('.selected').removeClass('selected');

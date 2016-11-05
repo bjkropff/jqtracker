@@ -28,29 +28,44 @@ $(document).ready(function() {
   }
   //==========================//
   //EDIT FUNCTION button
-  $( "button.notSelected" ).on( "click", function( event ) {
-    $('.selected').removeClass('selected btn-success');
-    $(this).addClass('selected btn-success');
-        var editName;
-    var currentId = $(".selected").attr("id");
-    for(var i = 0; i < list.length; i++){
-      if(list[i].id == currentId)
-      {
-        var editName =  $('#name').val(list[i].name);
-        var editInit = $('#init').val(list[i].init);
-        var editAC = $('#ac').val(list[i].ac);
-        var editHP = $('#hp').val(list[i].hp);
-      }
-    }
+  // $( "button.notSelected" ).on( "click", function( event ) {
+  //   $('.selected').removeClass('selected btn-success');
+  //   $(this).addClass('selected btn-success');
+  //       var editName;
+  //   var currentId = $(".selected").attr("id");
+  //   for(var i = 0; i < list.length; i++){
+  //     if(list[i].id == currentId)
+  //     {
+  //       var editName =  $('#name').val(list[i].name);
+  //       var editInit = $('#init').val(list[i].init);
+  //       var editAC = $('#ac').val(list[i].ac);
+  //       var editHP = $('#hp').val(list[i].hp);
+  //     }
+  //   }
+  // ^ commented out while editing the "add" function
+
+
 
   //===============================//
+  // ADD FUNCTION button
   //STILL IN WORKS - replace and resetvalues
     $( "button#add" ).on( "click", function( event ) {
-    $('.selected').parent("li").html('<button class="btn btn-primary notSelected" id="'+ list[i].id +'"" name="select">'+ list[i].name + '</button></br>Init: '
-      + list[i].init + " | AC: "
-      + list[i].ac + " | HP: " + list[i].hp
-      +  ' <button class="btn btn-danger " name="delete">X</button>');
+      $('#testlist').append('<button class="btn btn-primary notSelected"id="4" name="select">'
+        + $('#name').val()
+        + '</button></br>Init: ' +$('#init').val()
+        + " | AC: " + $('#ac').val()
+        + " | HP: " +$('#hp').val()
+        +  ' <button class="btn btn-danger " name="delete">X</button></br>'
+      );
 
+      console.log("selected");
+
+
+      // + list[i].id +'"" name="select">'+ list[i].name + '</button></br>Init: '
+      // + list[i].init + " | AC: "
+      // + list[i].ac + " | HP: " + list[i].hp
+      // +  ' <button class="btn btn-danger " name="delete">X</button>');
+      //^part of edit function commented out for ADD function test
   //====================================//
 
       $('#name').val();
@@ -58,8 +73,7 @@ $(document).ready(function() {
       $('#ac').val("");
       $('#hp').val("");
     });
-    console.log("selected");
-  });
+  // }); <--use with EDIT funciton button
   //====================================//
   //DELETE FUNCTION button - DONE
   $( ".btn-danger" ).on( "click", function( event ) {
