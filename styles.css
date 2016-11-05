@@ -1,0 +1,12 @@
+.dataTables_empty {
+  display: none;
+}
+
+.delete{
+  display: none;
+}
+
+.selected {
+  font-weight: bolder;
+
+}
