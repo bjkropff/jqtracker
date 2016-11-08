@@ -10,10 +10,12 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js">    </script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js">    </script>
     <!-- <script type="text/javascript" src="track.js">    </script> -->
-    <!-- <script type="text/javascript" src="characterScript.js"></script> -->
-    <!-- <script type="text/javascript" src="add.js"></script> -->
+    <script type="text/javascript" src="characterScript.js"></script>
     <script type="text/javascript" src="delete.js"></script>
-    <!-- <script type="text/javascript" src="edit.js"></script> -->
+    <script type="text/javascript" src="add.js"></script>
+    <script type="text/javascript" src="edit.js"></script>
+    <script type="text/javascript" src="order.js"></script>
+
     </script>
     <title></title>
   </head>
@@ -23,8 +25,15 @@
         <div class="col-lg-4" id="character">
           <ul id="testlist"></ul>
         </div>
-        <div class="col-lg-4" id="buttonCol">
+        <div class="col-lg-4" id="formEdit">
           <button class="btn btn-success btn-block" id="start">Roll a D20</button>
+            <form class="" action="" method="">
+              <input id="nameEdit"  placeholder="name"> </br>
+              <input id="initEdit"  placeholder="init"> </br>
+              <input id="acEdit"  placeholder="ac"> </br>
+              <input id="hpEdit" placeholder="hp"> </br>
+            </form>
+          <button class="btn btn-primary" id="edit">Edit</button>
         </div>
         <div class="col-lg-4" id="formAdd">
           <form class="" action="" method="">
