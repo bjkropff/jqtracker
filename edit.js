@@ -2,13 +2,13 @@
 
 // SETUP LIST OF CHARACTERS
 $(document).ready(function() {
-  event.preventDefault();
+  //event.preventDefault();
   //==========================//
   //EDIT FUNCTION button
   $( "button.notSelected" ).on( "click", function( event ) {
     $('.selected').removeClass('selected btn-success');
     $(this).addClass('selected btn-success');
-        var editName;
+    var editName;
     var currentId = $(".selected").attr("id");
     for(var i = 0; i < list.length; i++){
       if(list[i].id == currentId)
