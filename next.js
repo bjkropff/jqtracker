@@ -1,7 +1,7 @@
 $(document).ready(function() {
   event.preventDefault();
   //==========================//
-  //EDIT FUNCTION button
+  //NEXT FUNCTION button
 
   $( "button#next" ).on( "click", function( event ) {
     console.log("this thing");
