@@ -25,7 +25,7 @@ list = list.reverse();
 
 // SETUP LIST OF CHARACTERS
 $(document).ready(function() {
-  event.preventDefault();
+  //event.preventDefault();
 
   for(var i = 0; i < list.length; i++){
     $('ul#testlist').append($('<li> <button class="btn btn-primary notSelected" id="'+ list[i].id +'"" name="select">'+ list[i].name + '</button></br>Init: '
@@ -130,6 +130,39 @@ $(document).ready(function() {
   //DELETE FUNCTION button - DONE
   $( ".btn-danger" ).on( "click", function( event ) {
     $( this  ).parent('li').hide();
+  });
+
+//====================================//
+  //NEXT FUNCTION button - DONE
+  $( "button#next" ).on( "click", function( event ) {
+    console.log("this thing");
+
+    var shiftItem = list[0];
+    list.shift();
+    list.push(shiftItem);
+
+    $( '#testlist' ).children('li ').hide();
+
+    for(var i = 0; i < list.length; i++){
+      $('ul#testlist').append($('<li> <button class="btn btn-primary notSelected" id="'+ list[i].id +'"" name="select">'+ list[i].name + '</button></br>Init: '
+        + list[i].init + " | AC: "
+        + list[i].ac + " | HP: " + list[i].hp
+        +  ' <button class="btn btn-danger " name="delete">X</button></li>'
+      ));
+    }
+
+    $( ".btn-danger" ).on( "click", function( event ) {
+      $( this  ).parent('li').hide();
+    });
+
+  });
+
+  //====================================//
+    //ROLL FUNCTION button - DONE
+  $( "button#roll" ).on( "click", function( event ) {
+    $( '.result' ).hide();
+
+    $('#result').append($('<h1 class="result">'+ (Math.floor(Math.random() * 20) + 1) + '</h1>'));
   });
 
 })

@@ -5,23 +5,19 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title">
     <link rel="stylesheet" href="styles.css" media="screen" title="no title">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="characterScript.js"></script>
-    <script type="text/javascript" src="next.js"></script>
+    <script type="text/javascript" src="./js/characterScript.js"></script>
     <!-- <script type="text/javascript" src="roll.js"></script> -->
     <title>DM Helper</title>
   </head>
   <body>
     <div class="container">
-      <div class="row">
+      <div class="row" >
         <div class="col-lg-4" id="character">
           <ul id="testlist"></ul>
         </div>
         <div class="col-lg-4" id="formEdit">
-          <button class="btn btn-success btn-block" id="start">Roll a D20</button>
             <form class="" action="" method="">
               <input id="nameEdit"  placeholder="name"> </br>
               <input id="initEdit"  placeholder="init"> </br>
@@ -43,6 +39,11 @@
       <div class="row" id="initButtons" >
         <div col="col-lg-4">
           <button class="btn btn-primary" id="next">Next</button>
+        </div>
+        <div class="row" id="result">
+        </div>
+        <div class="row">
+          <button class="btn btn-success " id="roll">Roll a D20</button>
         </div>
       </div>
     </div>
